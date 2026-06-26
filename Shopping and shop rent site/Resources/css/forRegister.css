@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;300&display=swap');
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+body{
+    background-image: url("../images/imagesRegister.jpg");
+    /* background-size:contain;  */
+    /* background-color: black; */
+    background-position-x: center;
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+    /* z-index: 1; */
+    /* height: 230vh; */
+}
+
+input::placeholder {
+    color: white; /* Change this to your desired color */
+    opacity: 1; /* Optional: Makes the placeholder fully opaque */
+}
+label{
+    color: white; /* Change this to your desired color */
+    /* opacity: 1; Optional: Makes the placeholder fully opaque */
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    float: left;
+}
+
+input[type="radio"] {
+    margin-right: 8px; /* Space between radio button and label text */
+}
+
+#btn{
+    /* margin: 0px; */
+    /* float: left; */
+    border: 1.5px solid rgb(255, 115, 0);
+    color: rgb(255, 115, 0);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#btn:hover{
+    background-color: #e64a19;
+    color: black;
+    transition: 0.5s;
+}
+
+.main-cont{
+    min-height: 150vh;
+}
+
+.cont{
+    min-width: 45%;
+    height: 70%;
+    padding: 20px;
+    box-shadow: 0px 10px 15px 0px rgba(2, 2, 2, 0.8);
+    overflow-y: scroll;
+    
+    /* margin-inline: 5px; */
+}
+
+.cont::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+.cont::-webkit-scrollbar-thumb {
+    background: rgb(255, 115, 0); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners of the scrollbar thumb */
+}
+.cont::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners of the scrollbar track */
+}
+
+.main-cont input{
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body{
+        background-position-y: 300px;
+    }
+    .main-cont{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+}

@@ -1,0 +1,510 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* background-color: black; */
+    /* overflow: hidden; Prevent scrollbars*/ 
+}
+
+h4{
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+.home-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-nav img{
+    float: right;
+    /* max-width: 100px; */
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1; /* Allow the container to grow and fill available space */
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    margin-bottom: 10px;
+    /* overflow: hidden; */
+}
+.panel {
+    /* position: absolute; */
+    width: 300px;
+    height: fit-content;
+    /* background-color: rgb(255, 115, 0); */
+    background: rgba(255, 115, 0, 0.4);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%); /* Start off-screen */
+    transition: transform 0.4s ease; 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+.panel.active {
+    transform: translateX(0); 
+}
+.content {
+    display: none;
+    background-color: #fff;
+    font-size: 24px;
+}
+
+#div1{
+    display: block;
+}
+
+.panel button {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    color: rgb(255, 115, 0);
+    border: none;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.5s;
+    font-size: 19px;
+}
+.panel button:hover{
+    background-color: rgb(225, 101, 0);
+    color: black;
+    transition: 0.5s;
+}
+
+.panel i{
+    float: left;
+    font-size: 30px;
+}
+
+.open-menu-btn {
+     position: absolute;
+    /*top: 0px; 
+    right: 20px;  */
+    transition: transform 0.4s ease; 
+    z-index: 1;
+    float: left;
+}
+.panel.active ~ .open-menu-btn {
+    transform: translateX(-300px); 
+}
+
+.content h1 {
+    color: rgb(255, 115, 0);
+    text-align: center;
+}
+
+/* #div3 .form-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float: right;
+
+} */
+
+.contentDiv, .form-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* display: none; Initially hidden */
+}
+
+.contentDiv .headerDash{
+    display: flex;                 
+    justify-content: space-between;
+    width: 100%;                   
+    max-width: 1200px; 
+}
+
+.contentDiv .logOutBtn {
+    margin-left: auto;
+}
+
+.content table {
+    width: 100%;
+    border-collapse:separate;
+    border-spacing: 15px 15px;
+}
+.content th, .content td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 33%;
+    text-align: center;
+    vertical-align: top; /* Aligns content to the top */
+}
+.content th {
+    background-color: rgb(255, 115, 0);
+    color: white;
+}
+.content label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.content input, .content select, .content textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.content button {
+    background-color: rgb(255, 115, 0);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+.contentSecDiv form {
+    width: 100%;
+}
+.contentSecDiv form button{
+    width: 100%;
+}
+.content button:hover {
+    background-color: #e64a19;
+    color: black;
+    transition: 0.5s;
+}
+
+.form-container #upload_btn{
+    border: 2px solid #fff;
+}
+
+.form-container .add-item-btn {
+    background-color: rgb(255, 115, 0);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    text-align: center;
+}
+
+#imgBox {
+    background: #222;
+    background-size: cover;
+    background-position: center;
+    max-width: 300px;
+    height:55vh;
+    margin: auto;
+    position: relative;
+  }
+
+  .contentDiv #searchCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+  }
+  .contentDiv #search, #search2{
+    width: 200px;
+    border: 2px solid rgb(255, 115, 0);
+  }
+  .contentDiv #searchBtn{
+    margin-top: -1px;
+    width: 100px;
+  }
+  
+  /* #div3 .contentDiv{
+    width: fit-content;
+  } */
+
+  .contentDiv .contentSecDiv{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    margin-bottom: 20px;
+  }
+  .contentSecDiv .conts, .contentSecDiv .contsAll{
+    width: 200px;
+    /* border: 1px solid #000; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-inline: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentSecDiv .conts2{
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-inline: 5px;
+    padding: 5px;
+  }
+
+  /* .contentSecDiv h4{
+    font-size: 15px;
+  }
+  .contentSecDiv p{
+    font-size: 4px;
+  } */
+
+  /* #div2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+#contentDivId{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: auto auto auto; */
+    column-gap: 50px;
+    /* position: relative; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.showDiv2{
+    /* text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* width: 100px; */
+    display: flex; /* Use flexbox for alignment within each grid item */
+    flex-direction: column; /* Stack items vertically */
+    border: 1px solid #ddd; /* Add a border */
+    padding: 10px; /* Add some padding inside the border */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+}
+
+.showDiv2:last-child {
+    border: none; /* Remove border for the last showDiv2 which contains the button */
+    background-color: white; /* Optional: background color */
+}
+
+.showDiv2 button{
+    margin-top: 20px; /* Space above the button */
+    
+}
+
+#contentDivId form {
+    display: contents; /* Allow child elements to behave as grid items */
+} 
+
+.showDiv2 input,
+.showDiv2 textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for better usability */
+    border: 1px solid #ccc; /* Basic border */
+    border-radius: 4px; /* Rounded corners */
+    margin-top: 5px; /* Space between inputs */
+}
+
+/* .contentDivId #divBars i{
+    float: left;
+    font-size: 25px;
+    color: rgb(255, 115, 0);
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+}
+.contentDivId i:hover{
+    color: black;
+} */
+
+#contentDivId #saveBtn:hover{
+    background-color: #e64a19;
+    color: black;
+}
+
+.contentDivBlog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentDivBlog .blogClass{
+    width: 600px;
+    height: 100px;
+}
+
+  .dropdownEdit, .dropdownEdit2 {
+    /* float: right; */
+    list-style: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 35px;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+/* .dropdownEdit button{
+    width: 100%;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+} */
+
+.dropdownEdit #deleteBtn, .dropdownEdit2 #deleteBtn:hover{
+    border: 1px solid red;
+    color: red;
+}
+.dropdownEdit #editBtn:hover, .dropdownEdit2 #editBtn:hover #dashboardBtn:hover{
+    background-color: rgb(255, 115, 0);
+    color: black;
+}
+.dropdownEdit #deleteBtn:hover, .dropdownEdit2 #deleteBtn:hover{
+    background-color: red;
+    color: black;
+}
+
+/* #contentDivId input, #contentDivId select, #contentDivId textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+
+/* #contentDivId #saveBtn {
+    background-color: rgb(255, 115, 0);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.5s;
+} */
+
+.modal {
+    display: flex; /* Use flexbox to center the modal */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+.modal-content form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content button{
+    width: 50px;
+    cursor: pointer;
+    margin-inline: 10px;
+}
+
+
+@media (max-width: 750px) {
+    .main_page{
+        min-height: 130vh;
+    }
+
+    .content th{
+        font-size: 15px;
+    }
+
+    .content td{
+        font-size: 15px;
+    }
+
+    .container{
+        flex-direction:column;
+
+    }
+     .panel {
+        transform: translateX(-100%); /*Start off-screen*/
+        position: absolute;
+    }
+
+    .form-cont .form-container{
+        overflow-x: scroll;
+    }
+
+    .dropdownEdit,.dropdownEdit2 {
+        margin-top: -90px;
+    }
+
+    #contentDivId{
+        display: block;
+        margin-top: 70px;
+    }
+
+    .contentDiv .contentSecDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contentSecDiv .conts{
+        flex-direction: column;
+    }
+
+    .showInfoSecDiv{
+        display: block;
+        
+    }
+
+    .contentDivBlog .blogClass{
+        width: auto;
+        height: 100px;
+    }
+
+    /* #contentDivId #divBars{
+        float: right;
+    }
+    #contentDivId .dropdownEdit{
+        align-items: flex-end;
+    } */
+
+
+}

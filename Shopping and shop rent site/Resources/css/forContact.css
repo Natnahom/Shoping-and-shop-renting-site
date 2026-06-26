@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+body{
+    /* background-color: black; */
+    /* background-image: url('../../../Resources/images/images1.png'); */
+    /* background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: center; */
+
+}
+
+.cont input::placeholder {
+    color: white; /* Change this to your desired color */
+    opacity: 1; /* Optional: Makes the placeholder fully opaque */
+}
+
+/* For textareas */
+.cont textarea::placeholder {
+    color: white; /* Change this to your desired color */
+    opacity: 1; /* Optional: Makes the placeholder fully opaque */
+}
+
+.home .background_img{
+    position: absolute;
+    width: 540px;
+    height: 300px;
+    z-index: -1;
+    right: 1rem;
+    top: 140px;
+}
+
+h1, h2, h3{
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Medium */
+    cursor: pointer;
+}
+
+a{
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.home{
+    display: block;
+    min-height: 100vh;
+}
+
+.home .home-nav{
+    min-height: 100px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.home .home-nav img{
+    float: left;
+    /* max-width: 100px; */
+    width: 150px;
+    height: 150px;
+    position: absolute;
+}
+
+.home .home-nav ul{
+    display: flex;
+    list-style: none;
+    float: right;
+}
+
+.home .home-nav li{
+    margin-inline: 20px;
+    text-decoration: none;
+}
+
+.home .home-nav a{
+    transition: 0.5s;    
+}
+
+.home .home-nav a:hover{
+    color: rgb(255, 115, 0);
+    transition: 0.5s;    
+}
+
+.home .home-nav button{
+    border: none;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.home .home-nav button:hover{
+    background-color: rgb(225, 101, 0);
+    color: black;
+    transition: 0.5s;
+}
+
+.home .home-nav .toggle_btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home .home-cont{
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.home .home-cont h2{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.home .home-cont h3{
+    font-size: 30px;
+}
+
+.home .home-cont p{
+    font-size: 18px;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 70%;
+    height: 0;
+    background: rgba(255,55,25,0.1);
+    backdrop-filter: blur(15px);
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+.dropdown-menu button{
+    border: none;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.dropdown-menu button:hover{
+    background-color: rgb(225, 101, 0);
+    color: black;
+    transition: 0.5s;
+}
+
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .main_btns{
+    display: flex;
+    justify-content: center;
+}
+
+.home .main_btns button{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    height: 50px;
+    width: 150px;
+    margin-inline: 20px;
+    transition: 0.5s;
+}
+
+.home .main_btns button:hover{
+    box-shadow: 0px 10px 15px 0px rgba(2, 2, 2, 0.8);
+    transition: 0.5s;
+    background-color: rgb(225, 101, 0);
+    color: black;
+}
+
+.home .main_btns a{
+    font-size: 50px;
+}
+
+.main-cont{
+    height: 110vh;
+    /* border: 2px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.cont{
+    width: 45%;
+    height: 70%;
+    padding: 20px;
+    box-shadow: 0px 10px 15px 0px rgba(2, 2, 2, 0.8);
+    
+    /* margin-inline: 5px; */
+}
+.cont1{
+    /* border: 2px solid #000; */
+    border-radius: 10px 0 0 10px;
+}
+.cont2{
+    /* border: 2px solid #000; */
+    background-color: rgb(255, 115, 0);
+    border-radius: 0 10px 10px 0;
+}
+
+.contact-form2 input,
+  .contact-form2 textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 115, 0);
+    /* border: none; */
+    color: #fff;
+    border: 2px solid#fff;
+    border-radius: 50px;
+  }
+  
+  .contact-form2 button {
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border: 2px solid white ;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-radius: 5px;
+  }
+  
+  .contact-form2 button:hover {
+    background-color: rgb(255, 184, 126);
+    color: black;
+    transition: 0.5s;
+  }
+
+  .social .bx{
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .bx, .fa, .fa-solid, .fa-brands{
+    color: rgb(255, 115, 0);
+  }
+
+  .bx:hover, .fa:hover, .fa-solid:hover, .fa-brands:hover{
+    color: black;
+  }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 750px) {
+    .home {
+      min-height: 120vh;
+    }
+  
+    .home .home-nav {
+      padding: 15px;
+      padding-bottom: 20px;
+      position: relative;
+      margin-bottom: 150px;
+    }
+
+    .home .background_img{
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+
+    .home .home-nav img {
+      max-width: 100px;
+    }
+
+    .home .home-nav .toggle_btn{
+        display: block;
+        float: right;
+    }
+
+    .home .home-nav .dropdown-content{
+        display: none;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+
+    .dropdown-menu .links{
+        border-bottom: black solid 2px;
+        transition: 1s;        
+    }
+
+    .dropdown-menu .links:hover{
+        background-color: rgb(255, 115, 0);
+        transition: 1s;        
+    }
+  
+    .home .home-cont h2 {
+      font-size: 2em;
+    }
+  
+    .home .home-cont h3 {
+      font-size: 20px;
+    }
+  
+    .home .home-cont p {
+      font-size: 14px;
+    }
+  
+    .home .home-cont button {
+      font-size: 14px;
+    }
+    .main-cont{
+        flex-direction: column;
+        height: 180vh;
+    }
+    .cont1{
+        border-radius: 10px 10px 0 0;
+    }
+    .cont2{
+        border-radius: 0 0 10px 10px;
+    }
+}

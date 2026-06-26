@@ -1,0 +1,554 @@
+
+*{
+    margin: 0;
+}
+
+h1, h2, h3{
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Medium */
+    cursor: pointer;
+}
+
+a{
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.home{
+    display: block;
+    /* min-height: 120vh; */
+}
+
+.home .home-nav{
+    /* min-height: 100px; */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.home .home-nav img{
+    float: left;
+    /* max-width: 100px; */
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.home .home-nav ul{
+    display: flex;
+    list-style: none;
+    float: right;
+}
+
+.home .home-nav li{
+    margin-inline: 20px;
+    text-decoration: none;
+}
+
+.home .home-nav a{
+    transition: 0.5s;    
+}
+
+.home .home-nav a:hover{
+    color: rgb(255, 115, 0);
+    transition: 0.5s;    
+}
+
+.home .home-nav button{
+    border: none;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.home .home-nav button:hover{
+    background-color: rgb(225, 101, 0);
+    color: black;
+    transition: 0.5s;
+}
+
+.home .home-nav .toggle_btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home .home-cont{
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.home .home-cont h2{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.home .home-cont h3{
+    font-size: 30px;
+}
+
+.home .home-cont p{
+    font-size: 18px;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 70%;
+    height: 0;
+    background: rgba(255,55,25,0.1);
+    backdrop-filter: blur(15px);
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.dropdown-menu.open{
+    height: 240px;
+}
+
+.dropdown-menu button{
+    border: none;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.dropdown-menu button:hover{
+    background-color: rgb(225, 101, 0);
+    color: black;
+    transition: 0.5s;
+}
+
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .main_btns{
+    display: flex;
+    justify-content: center;
+}
+
+.home .main_btns button{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    height: 50px;
+    width: 150px;
+    margin-inline: 20px;
+    transition: 0.5s;
+}
+
+.home .main_btns button:hover{
+    box-shadow: 0px 10px 15px 0px rgba(2, 2, 2, 0.8);
+    transition: 0.5s;
+    background-color: rgb(225, 101, 0);
+    color: black;
+}
+
+.home .main_btns a{
+    font-size: 50px;
+}
+
+.social .bx{
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+.bx, .fa, .fa-solid, .fa-brands{
+    color: rgb(255, 115, 0);
+}
+
+.bx:hover, .fa:hover, .fa-solid:hover, .fa-brands:hover{
+    color: black;
+}
+
+.main_shop{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.blog{
+    border: 1px solid #000;
+    width: 100%;
+    height: 200px;
+}
+
+.panel_shop {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    position: sticky; /* Makes the panel sticky */
+    top: 20px; /* Space from top */
+    z-index: 1000; /* Ensures it stays above other content */
+    height: fit-content;
+}
+
+.main_shop h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.item-count {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.main_shop h3 {
+    color: rgb(255, 115, 0); /* Orange color for headings */
+    border-bottom: 2px solid rgb(255, 115, 0);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.main_shop label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555; /* Dark grey for label text */
+}
+
+.main_shop input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.main_shop select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.main_shop select:focus {
+    outline: none;
+    border-color: rgb(255, 115, 0); /* Change border color on focus */
+}
+
+.main_shop input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.main_shop input[type="text"]:focus {
+    outline: none;
+    border-color: rgb(255, 115, 0); /* Change border color on focus */
+}
+
+/* Button Styles */
+.main_shop button {
+    background-color: rgb(255, 115, 0); /* Orange button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.main_shop button:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+.main_shop button:focus {
+    outline: none;
+}
+
+.content h1 {
+    color: rgb(255, 115, 0);
+    text-align: center;
+}
+
+.content label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.content input, .content select, .content textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.content button {
+    background-color: rgb(255, 115, 0);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+.contentSecDiv form {
+    width: 100%;
+}
+.contentSecDiv form button{
+    width: 100%;
+}
+.content button:hover {
+    background-color: #e64a19;
+    color: black;
+    transition: 0.5s;
+}
+
+  .contentDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #searchCont{
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .contentDiv #search{
+    width: 500px;
+    border: 2px solid rgb(255, 115, 0);
+  }
+  .contentDiv #searchBtn{
+    margin-top: -1px;
+    width: 100px;
+  } 
+
+  .contentDiv .contentSecDiv{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+  }
+  .contentSecDiv .conts{
+    width: 200px;
+    /* border: 1px solid #000; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-inline: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.pagination-container {
+    display: flex;                        /* Use flexbox for layout */
+    align-items: center;                 /* Center items vertically */
+    overflow-x: auto;                   /* Enable horizontal scrolling */
+    white-space: nowrap;                 /* Prevent line breaks */
+    margin: 20px 0;                     /* Margin for spacing */
+    padding: 10px;                       /* Padding for aesthetic */
+    border: 1px solid #ccc;              /* Optional: Add border for visibility */
+    border-radius: 5px;                  /* Optional: Rounded corners */
+    max-width: 330px;                    /* Set a max width for scrolling */
+}
+
+.pagination-container button {
+    margin: 0 5px;                       /* Margin between buttons */
+    padding: 10px 15px;                  /* Padding for buttons */
+    cursor: pointer;                     /* Change cursor on hover */
+    background-color: rgb(255, 115, 0);           /* Button background color */
+    color: white;                        /* Button text color */
+    border: none;                        /* Remove border */
+    border-radius: 5px;                  /* Rounded corners for buttons */
+}
+
+.pagination-container button:disabled {
+    cursor: not-allowed;                 /* Change cursor for disabled buttons */
+    opacity: 0.5;                        /* Make disabled buttons semi-transparent */
+}
+
+.pagination-container button:hover:not(:disabled) {
+    background-color: #e64a19;           /* Change background on hover */
+}
+
+  .showCart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 115, 0);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    width: 60px; /* Initial width to show only the icon */
+}
+
+.showCart:hover {
+    width: 110px; /* Width on hover to show text */
+}
+
+.showCart form {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Full height for button */
+}
+
+.showCart button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.showCart button:hover {
+    background-color: #e64a19; /* Slight dark overlay on hover */
+}
+
+.showCart h2 {
+    margin: 0;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px); /* Slide effect */
+}
+
+.showCart:hover h2 {
+    opacity: 1; /* Show text on hover */
+    transform: translateX(0); /* Slide in */
+}
+
+.showCart i {
+    font-size: 24px;
+    color: white; /* Icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+ 
+  @media (max-width: 750px) {
+    
+      .home .home-nav {
+        padding: 15px;
+        padding-bottom: 20px;
+        position: relative;
+        margin-bottom: 150px;
+      }
+  
+      .home .home-nav img {
+        max-width: 100px;
+      }
+  
+      .home .home-nav .toggle_btn{
+          display: block;
+          float: right;
+      }
+  
+      .home .home-nav .dropdown-content{
+          display: none;
+      }
+  
+      .dropdown-menu{
+          display: block;
+      }
+  
+      .dropdown-menu .links{
+          border-bottom: black solid 2px;
+          transition: 1s;        
+      }
+  
+      .dropdown-menu .links:hover{
+          background-color: rgb(255, 115, 0);
+          transition: 1s;        
+      }
+    
+      .home .home-cont h2 {
+        font-size: 2em;
+      }
+    
+      .home .home-cont h3 {
+        font-size: 20px;
+      }
+    
+      .home .home-cont p {
+        font-size: 14px;
+      }
+    
+      .home .home-cont button {
+        font-size: 14px;
+      }
+
+    .main_shop{
+        display: block;
+    }
+
+    .panel_shop {
+        position: relative;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+    
+    .contentDiv .contentSecDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contentDiv #searchCont{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 10px; */
+    
+    }
+
+    .showInfoSecDiv{
+        display: block;
+        
+    }
+
+    #overlay #closeBtn{
+        float: right;
+      }
+}

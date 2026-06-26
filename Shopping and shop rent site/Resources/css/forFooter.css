@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+h1, h2, h3{
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+button{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; /* Medium */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    position: relative; /* Added this to position the footer-bottom */
+    min-height: 80vh;
+    border-radius: 15px;
+    /* font-family: 'Lato', Arial, Helvetica, sans-serif; */
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+  }
+
+  .footer-content h3{
+    color: rgb(255, 115, 0);
+  }
+  
+  .footer-section {
+    flex-basis: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section p {
+    line-height: 1.5;
+  }
+  
+  .contact span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .contact i {
+    margin-right: 10px;
+    color: #ccc;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .links ul li a:hover {
+    color: rgb(255, 115, 0);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+  }
+  
+  .contact-form button {
+    background-color: rgb(255, 115, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-radius: 5px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #e64a19;
+    color: black;
+    transition: 0.5s;
+  }
+  
+  .footer-bottom {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    /* margin-top: 30px; */
+    position: absolute; /* Added this to position the footer-bottom at the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 15px 15px;
+
+  }
+  
+  @media (min-width: 768px) {
+    .footer-section {
+      flex-basis: 30%;
+      margin-bottom: 0;
+      text-align: left;
+    }
+  
+    .footer-content {
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .contact-form input,
+  .contact-form textarea {
+    overflow: hidden;
+  }
+  }
